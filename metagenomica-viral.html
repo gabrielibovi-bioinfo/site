@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metagenômica Viral — Ômix Bioinformática</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="brand-dot"></span>ômix bioinformática</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#sobre">Sobre</a>
+      <a href="index.html#servicos">Serviços</a>
+      <a href="index.html#contato">Contato</a>
+    </div>
+    <div class="nav-search">
+      <input type="text" id="site-search" placeholder="Buscar análise..." autocomplete="off">
+      <div class="search-results" id="search-results"></div>
+    </div>
+  </div>
+</nav>
+
+<div class="detail-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">home</a> / metagenômica viral</p>
+    <h1>Metagenômica Viral (Viroma)</h1>
+    <p class="lead">Identificação e caracterização de vírus — conhecidos e desconhecidos — presentes em amostras ambientais, clínicas ou alimentares, sem cultivo prévio.</p>
+    <div class="pill-row">
+      <span class="pill">SPAdes / MEGAHIT</span><span class="pill">VirSorter2</span><span class="pill">DIAMOND</span><span class="pill">One Health</span>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="container two-col">
+    <div class="detail-block">
+      <h2>O que essa análise revela</h2>
+      <p>A partir de reads de sequenciamento, identificamos sequências de origem viral (DNA e RNA) presentes na amostra — úteis para vigilância epidemiológica, estudos de <strong>One Health</strong>, descoberta de novos vírus e controle de qualidade em alimentos e insumos biológicos.</p>
+      <p>O grande desafio dessa análise é a <strong>ausência de referências completas</strong> para muitos vírus — por isso o pipeline combina montagem de novo com busca por similaridade remota (proteica) para identificar até vírus não catalogados.</p>
+
+      <h2 style="margin-top:32px;">Etapas do pipeline</h2>
+      <ul class="step-list">
+        <li><span class="step-num">01</span><span><strong>Depleção do hospedeiro</strong> — remoção de reads que não são de origem viral.</span></li>
+        <li><span class="step-num">02</span><span><strong>Montagem de novo</strong> — reconstrução de genomas/contigs virais (SPAdes/MEGAHIT).</span></li>
+        <li><span class="step-num">03</span><span><strong>Identificação viral</strong> — VirSorter2 e busca por similaridade (DIAMOND) contra bancos virais.</span></li>
+        <li><span class="step-num">04</span><span><strong>Anotação funcional</strong> — genes e proteínas virais identificados nos contigs.</span></li>
+        <li><span class="step-num">05</span><span><strong>Análise filogenética</strong> — posicionamento evolutivo das sequências encontradas.</span></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 style="font-size:20px;margin-bottom:14px;">Gráficos entregues</h2>
+
+      <div class="chart-card">
+        <p class="chart-title">Árvore filogenética dos contigs virais</p>
+        <svg viewBox="0 0 400 180" role="img"><title>Árvore filogenética simplificada</title>
+          <g stroke="#E2704C" stroke-width="1.5" fill="none">
+            <path d="M30,90 L70,90 M70,90 L70,40 M70,40 L120,40 M70,90 L70,140 M70,140 L120,140"/>
+            <path d="M120,40 L120,20 M120,20 L170,20 M120,40 L120,60 M120,60 L170,60"/>
+            <path d="M120,140 L120,120 M120,120 L170,120 M120,140 L120,160 M120,160 L170,160"/>
+          </g>
+          <g font-family="IBM Plex Mono" font-size="9" fill="#93A098">
+            <text x="175" y="23">contig_014 (Siphoviridae)</text>
+            <text x="175" y="63">contig_002 (Podoviridae)</text>
+            <text x="175" y="123">contig_031 (não classificado)</text>
+            <text x="175" y="163">contig_009 (Myoviridae)</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="chart-card">
+        <p class="chart-title">Abundância relativa de famílias virais</p>
+        <svg viewBox="0 0 400 160" role="img"><title>Gráfico de barras de abundância de famílias virais</title>
+          <g fill="#E2704C">
+            <rect x="40" y="40" width="40" height="100"/>
+            <rect x="110" y="70" width="40" height="70"/>
+            <rect x="180" y="90" width="40" height="50"/>
+            <rect x="250" y="105" width="40" height="35"/>
+            <rect x="320" y="120" width="40" height="20"/>
+          </g>
+          <g font-family="IBM Plex Mono" font-size="8.5" fill="#93A098">
+            <text x="60" y="152" text-anchor="middle">Sipho.</text>
+            <text x="130" y="152" text-anchor="middle">Podo.</text>
+            <text x="200" y="152" text-anchor="middle">Myo.</text>
+            <text x="270" y="152" text-anchor="middle">Micro.</text>
+            <text x="340" y="152" text-anchor="middle">Outras</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="back-cta">
+      <div><h3>Precisa identificar vírus em uma amostra?</h3><p>Conte o contexto da amostra (ambiental, clínica, alimentar) para orientarmos o pipeline.</p></div>
+      <a href="index.html#contato" class="btn btn-primary">Solicitar orçamento</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© 2026 Ômix Bioinformática</span>
+    <a href="index.html">← Voltar para home</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

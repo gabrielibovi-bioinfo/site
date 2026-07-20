@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transcriptômica (RNA-seq) — Ômix Bioinformática</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="brand-dot"></span>ômix bioinformática</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#sobre">Sobre</a>
+      <a href="index.html#servicos">Serviços</a>
+      <a href="index.html#contato">Contato</a>
+    </div>
+    <div class="nav-search">
+      <input type="text" id="site-search" placeholder="Buscar análise..." autocomplete="off">
+      <div class="search-results" id="search-results"></div>
+    </div>
+  </div>
+</nav>
+
+<div class="detail-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">home</a> / transcriptômica</p>
+    <h1>Transcriptômica — RNA-seq bulk & single-cell</h1>
+    <p class="lead">Quantificação da expressão gênica para entender quais genes estão ativos em uma condição, tecido ou tipo celular específico.</p>
+    <div class="pill-row">
+      <span class="pill">STAR / Salmon</span><span class="pill">DESeq2 / edgeR</span><span class="pill">Seurat / Scanpy</span><span class="pill">scRNA-seq</span>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="container two-col">
+    <div class="detail-block">
+      <h2>O que essa análise revela</h2>
+      <p>No modo <strong>bulk</strong>, medimos a expressão média de genes em uma amostra inteira — ideal para comparar condições (doença vs. saudável, tratado vs. controle).</p>
+      <p>No modo <strong>single-cell</strong>, medimos a expressão célula por célula, permitindo identificar tipos celulares distintos dentro de um mesmo tecido e suas trajetórias de diferenciação.</p>
+
+      <h2 style="margin-top:32px;">Etapas do pipeline</h2>
+      <ul class="step-list">
+        <li><span class="step-num">01</span><span><strong>Alinhamento / pseudo-alinhamento</strong> — STAR ou Salmon contra genoma/transcriptoma de referência.</span></li>
+        <li><span class="step-num">02</span><span><strong>Quantificação</strong> — contagem de reads por gene/transcrito.</span></li>
+        <li><span class="step-num">03</span><span><strong>Bulk:</strong> análise diferencial com DESeq2/edgeR. <strong>Single-cell:</strong> clusterização com Seurat/Scanpy.</span></li>
+        <li><span class="step-num">04</span><span><strong>Anotação de tipos celulares</strong> (single-cell) ou <strong>enriquecimento de vias</strong> (bulk, GSEA).</span></li>
+        <li><span class="step-num">05</span><span><strong>Relatório com gráficos</strong> prontos para publicação.</span></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 style="font-size:20px;margin-bottom:14px;">Gráficos entregues</h2>
+
+      <div class="chart-card">
+        <p class="chart-title">Volcano plot — genes diferencialmente expressos (bulk)</p>
+        <svg viewBox="0 0 400 180" role="img"><title>Volcano plot de expressão diferencial de genes</title>
+          <line x1="30" y1="150" x2="380" y2="150" stroke="#5C6862" stroke-width="1"/>
+          <line x1="200" y1="20" x2="200" y2="150" stroke="#5C6862" stroke-width="0.5" stroke-dasharray="3,3"/>
+          <g fill="#93A098">
+            <circle cx="90" cy="115" r="3.5"/><circle cx="140" cy="105" r="3.5"/><circle cx="260" cy="110" r="3.5"/>
+          </g>
+          <g fill="#D4537E"><circle cx="60" cy="40" r="4"/><circle cx="80" cy="55" r="4"/><circle cx="100" cy="30" r="4"/></g>
+          <g fill="#3FBF7F"><circle cx="330" cy="35" r="4"/><circle cx="310" cy="55" r="4"/><circle cx="350" cy="50" r="4"/></g>
+        </svg>
+      </div>
+
+      <div class="chart-card">
+        <p class="chart-title">UMAP — clusters celulares (single-cell)</p>
+        <svg viewBox="0 0 400 180" role="img"><title>Gráfico UMAP de clusters de células</title>
+          <g fill="#D4537E"><circle cx="90" cy="60" r="4"/><circle cx="100" cy="75" r="4"/><circle cx="80" cy="80" r="4"/><circle cx="105" cy="55" r="4"/></g>
+          <g fill="#3FBF7F"><circle cx="200" cy="50" r="4"/><circle cx="215" cy="65" r="4"/><circle cx="190" cy="70" r="4"/><circle cx="210" cy="45" r="4"/></g>
+          <g fill="#9B87F5"><circle cx="150" cy="120" r="4"/><circle cx="165" cy="135" r="4"/><circle cx="140" cy="140" r="4"/><circle cx="170" cy="115" r="4"/></g>
+          <g fill="#E0A83F"><circle cx="290" cy="110" r="4"/><circle cx="305" cy="125" r="4"/><circle cx="280" cy="130" r="4"/><circle cx="310" cy="105" r="4"/></g>
+          <text x="90" y="40" font-family="IBM Plex Mono" font-size="9" fill="#D4537E">T cells</text>
+          <text x="195" y="35" font-family="IBM Plex Mono" font-size="9" fill="#3FBF7F">B cells</text>
+          <text x="135" y="155" font-family="IBM Plex Mono" font-size="9" fill="#9B87F5">Monócitos</text>
+          <text x="270" y="150" font-family="IBM Plex Mono" font-size="9" fill="#E0A83F">NK cells</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="back-cta">
+      <div><h3>Tem dados de RNA-seq para analisar?</h3><p>Conte se é bulk ou single-cell e qual a plataforma de sequenciamento.</p></div>
+      <a href="index.html#contato" class="btn btn-primary">Solicitar orçamento</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© 2026 Ômix Bioinformática</span>
+    <a href="index.html">← Voltar para home</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
