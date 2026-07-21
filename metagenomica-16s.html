@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Metagenômica 16S & Shotgun — Ômix Bioinformática</title>
+<title>Metagenômica 16S — Ômix Bioinformática</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -16,8 +16,8 @@
     <a href="index.html" class="brand"><span class="brand-dot"></span>ômix bioinformática</a>
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="index.html#sobre">Sobre</a>
       <a href="index.html#servicos">Serviços</a>
+      <a href="index.html#sobre">Sobre</a>
       <a href="index.html#contato">Contato</a>
     </div>
     <div class="nav-search">
@@ -29,11 +29,11 @@
 
 <div class="detail-hero">
   <div class="container">
-    <p class="breadcrumb"><a href="index.html">home</a> / metagenômica 16s & shotgun</p>
-    <h1>Metagenômica 16S rRNA & Shotgun</h1>
-    <p class="lead">Identificação e comparação de comunidades microbianas presentes em amostras ambientais, clínicas ou industriais — sem necessidade de cultivo.</p>
+    <p class="breadcrumb"><a href="index.html">home</a> / metagenômica 16s rRNA</p>
+    <h1>Metagenômica 16S rRNA</h1>
+    <p class="lead">Identificação e comparação de comunidades microbianas presentes em amostras ambientais, clínicas ou industriais.</p>
     <div class="pill-row">
-      <span class="pill">Illumina</span><span class="pill">Nanopore</span><span class="pill">QIIME2</span><span class="pill">DADA2</span><span class="pill">Kraken2</span><span class="pill">MetaPhlAn</span>
+      <span class="pill">Illumina</span><span class="pill">Nanopore</span><span class="pill">QIIME2</span><span class="pill">DADA2</span><span class="pill">Kraken2</span><span class="pill">Picrust2</span>
     </div>
   </div>
 </div>
@@ -42,22 +42,22 @@
   <div class="container two-col">
     <div class="detail-block">
       <h2>O que essa análise revela</h2>
-      <p>Sequenciamos e comparamos o material genético presente em uma amostra (solo, água, fezes, microbioma de planta, superfícies etc.) para responder: <strong>quais micro-organismos estão presentes</strong> e <strong>em que proporção</strong>, sem precisar isolá-los em laboratório.</p>
+      <p>Sequenciamos e comparamos o material genético presente em uma amostra (solo, água, fezes, microbioma de planta, superfícies etc.) para responder: <strong>quais microrganismos estão presentes e funções metabólicas</strong>, sem precisar isolá-los em laboratório.</p>
       <p>O <strong>16S rRNA</strong> sequencia uma região específica do genoma bacteriano/arqueal para classificação taxonômica rápida e de baixo custo. Já o <strong>shotgun metagenômico</strong> sequencia todo o DNA da amostra, permitindo também inferir funções metabólicas presentes na comunidade.</p>
 
       <h2 style="margin-top:32px;">Etapas do pipeline</h2>
       <ul class="step-list">
         <li><span class="step-num">01</span><span><strong>Controle de qualidade</strong> — remoção de adaptadores e reads de baixa qualidade (fastp/FastQC).</span></li>
-        <li><span class="step-num">02</span><span><strong>Agrupamento</strong> — inferência de ASVs (DADA2) ou OTUs a partir dos reads filtrados.</span></li>
-        <li><span class="step-num">03</span><span><strong>Classificação taxonômica</strong> — contra bancos SILVA, GTDB ou Kraken2/MetaPhlAn para shotgun.</span></li>
-        <li><span class="step-num">04</span><span><strong>Análise de diversidade</strong> — diversidade alfa (dentro da amostra) e beta (entre amostras/grupos).</span></li>
-        <li><span class="step-num">05</span><span><strong>Relatório interpretativo</strong> — gráficos e discussão biológica dos resultados.</span></li>
+        <li><span class="step-num">02</span><span><strong>Agrupamento</strong> — inferência de ASVs (DADA2) ou OTUs (QIIME2) a partir dos reads filtrados.</span></li>
+        <li><span class="step-num">03</span><span><strong>Classificação taxonômica</strong> — contra bancos SILVA, GTDB ou MiDAS.</span></li>
+        <li><span class="step-num">04</span><span><strong>Análise de diversidade</strong> — diversidade alfa e beta.</span></li>
+        <li><span class="step-num">05</span><span><strong>Relatório</strong> — explicação da metodologia e resultados.</span></li>
       </ul>
     </div>
 
     <div>
       <h2 style="font-size:20px;margin-bottom:14px;">Gráficos entregues</h2>
-      <p style="color:var(--text-secondary);font-size:13.5px;margin-bottom:16px;">Exemplos reais gerados a partir de uma análise 16S conduzida com DADA2 e QIIME2.</p>
+      <p style="color:var(--text-secondary);font-size:13.5px;margin-bottom:16px;">Exemplos reais gerados a partir de uma análise 16S conduzida com DADA2.</p>
 
       <div class="carousel">
         <div class="carousel-viewport">
@@ -67,11 +67,10 @@
             <div class="carousel-slide" data-caption="Taxas de erro estimadas pelo modelo do DADA2"><img src="img/plotErrors_F.jpg" alt="Taxas de erro do DADA2"></div>
             <div class="carousel-slide" data-caption="Curva de rarefação por amostra"><img src="img/rarecurve.jpg" alt="Curva de rarefação"></div>
             <div class="carousel-slide" data-caption="Riqueza de espécies (diversidade alfa) por amostra"><img src="img/richness.jpg" alt="Riqueza de espécies por amostra"></div>
-            <div class="carousel-slide" data-caption="Composição taxonômica — barras empilhadas por amostra"><img src="img/barplot_f.jpg" alt="Composição taxonômica em barras empilhadas"></div>
-            <div class="carousel-slide" data-caption="Heatmap de abundância relativa de táxons"><img src="img/heatmap_f.jpg" alt="Heatmap de abundância de táxons"></div>
-            <div class="carousel-slide" data-caption="Abundância funcional normalizada por família"><img src="img/func_norm_family_2.jpg" alt="Abundância funcional normalizada por família"></div>
             <div class="carousel-slide" data-caption="NMDS — diversidade beta entre amostras"><img src="img/plot_beta_NMDS.jpg" alt="NMDS de diversidade beta"></div>
             <div class="carousel-slide" data-caption="PCoA — diversidade beta entre amostras"><img src="img/plot_beta_PCoA.jpg" alt="PCoA de diversidade beta"></div>
+            <div class="carousel-slide" data-caption="Composição taxonômica — barras empilhadas por amostra"><img src="img/barplot_f.jpg" alt="Composição taxonômica em barras empilhadas"></div>
+            <div class="carousel-slide" data-caption="Abundância funcional normalizada por família"><img src="img/func_norm_family_2.jpg" alt="Abundância funcional normalizada por família"></div>
           </div>
           <button class="carousel-nav carousel-prev" aria-label="Anterior">‹</button>
           <button class="carousel-nav carousel-next" aria-label="Próximo">›</button>
