@@ -16,8 +16,8 @@
     <a href="index.html" class="brand"><span class="brand-dot"></span>ômix bioinformática</a>
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="index.html#sobre">Sobre</a>
       <a href="index.html#servicos">Serviços</a>
+      <a href="index.html#sobre">Sobre</a>
       <a href="index.html#contato">Contato</a>
     </div>
     <div class="nav-search">
@@ -47,42 +47,33 @@
 
       <h2 style="margin-top:32px;">Etapas do pipeline</h2>
       <ul class="step-list">
-        <li><span class="step-num">01</span><span><strong>Alinhamento / pseudo-alinhamento</strong> — STAR ou Salmon contra genoma/transcriptoma de referência.</span></li>
-        <li><span class="step-num">02</span><span><strong>Quantificação</strong> — contagem de reads por gene/transcrito.</span></li>
-        <li><span class="step-num">03</span><span><strong>Bulk:</strong> análise diferencial com DESeq2/edgeR. <strong>Single-cell:</strong> clusterização com Seurat/Scanpy.</span></li>
-        <li><span class="step-num">04</span><span><strong>Anotação de tipos celulares</strong> (single-cell) ou <strong>enriquecimento de vias</strong> (bulk, GSEA).</span></li>
-        <li><span class="step-num">05</span><span><strong>Relatório com gráficos</strong> prontos para publicação.</span></li>
+        <li><span class="step-num">01</span><span><strong>Controle de qualidade</strong> — remoção de adaptadores e reads de baixa qualidade (fastp/FastQC).</span></li>
+        <li><span class="step-num">02</span><span><strong>Alinhamento/ pseudo-alinhamento</strong> — STAR ou Salmon contra genoma/transcriptoma de referência.</span></li>
+        <li><span class="step-num">03</span><span><strong>Quantificação</strong> — contagem de reads por gene/transcrito.</span></li>
+        <li><span class="step-num">04</span><span><strong>Análise diferencial:</strong> - com DESeq2.
+        <li><span class="step-num">05</span><span><strong>Enriquecimento funcional</strong> - GSEA (Gene Ontology, KEGG e Reactome).</span></li>
+        <li><span class="step-num">06</span><span><strong>Relatório</strong> - explicação da metodologia e resultados.</span></li>
       </ul>
     </div>
 
     <div>
       <h2 style="font-size:20px;margin-bottom:14px;">Gráficos entregues</h2>
+      <p style="color:var(--text-secondary);font-size:13.5px;margin-bottom:16px;">Exemplos reais gerados com dados público.</p>
 
-      <div class="chart-card">
-        <p class="chart-title">Volcano plot — genes diferencialmente expressos (bulk)</p>
-        <svg viewBox="0 0 400 180" role="img"><title>Volcano plot de expressão diferencial de genes</title>
-          <line x1="30" y1="150" x2="380" y2="150" stroke="#5C6862" stroke-width="1"/>
-          <line x1="200" y1="20" x2="200" y2="150" stroke="#5C6862" stroke-width="0.5" stroke-dasharray="3,3"/>
-          <g fill="#93A098">
-            <circle cx="90" cy="115" r="3.5"/><circle cx="140" cy="105" r="3.5"/><circle cx="260" cy="110" r="3.5"/>
-          </g>
-          <g fill="#D4537E"><circle cx="60" cy="40" r="4"/><circle cx="80" cy="55" r="4"/><circle cx="100" cy="30" r="4"/></g>
-          <g fill="#3FBF7F"><circle cx="330" cy="35" r="4"/><circle cx="310" cy="55" r="4"/><circle cx="350" cy="50" r="4"/></g>
-        </svg>
-      </div>
-
-      <div class="chart-card">
-        <p class="chart-title">UMAP — clusters celulares (single-cell)</p>
-        <svg viewBox="0 0 400 180" role="img"><title>Gráfico UMAP de clusters de células</title>
-          <g fill="#D4537E"><circle cx="90" cy="60" r="4"/><circle cx="100" cy="75" r="4"/><circle cx="80" cy="80" r="4"/><circle cx="105" cy="55" r="4"/></g>
-          <g fill="#3FBF7F"><circle cx="200" cy="50" r="4"/><circle cx="215" cy="65" r="4"/><circle cx="190" cy="70" r="4"/><circle cx="210" cy="45" r="4"/></g>
-          <g fill="#9B87F5"><circle cx="150" cy="120" r="4"/><circle cx="165" cy="135" r="4"/><circle cx="140" cy="140" r="4"/><circle cx="170" cy="115" r="4"/></g>
-          <g fill="#E0A83F"><circle cx="290" cy="110" r="4"/><circle cx="305" cy="125" r="4"/><circle cx="280" cy="130" r="4"/><circle cx="310" cy="105" r="4"/></g>
-          <text x="90" y="40" font-family="IBM Plex Mono" font-size="9" fill="#D4537E">T cells</text>
-          <text x="195" y="35" font-family="IBM Plex Mono" font-size="9" fill="#3FBF7F">B cells</text>
-          <text x="135" y="155" font-family="IBM Plex Mono" font-size="9" fill="#9B87F5">Monócitos</text>
-          <text x="270" y="150" font-family="IBM Plex Mono" font-size="9" fill="#E0A83F">NK cells</text>
-        </svg>
+      <div class="carousel">
+        <div class="carousel-viewport">
+          <div class="carousel-track">
+            <div class="carousel-slide" data-caption="Perfil de qualidade dos reads forward antes do processamento"><img src="img/quality_F.jpg" alt="Perfil de qualidade dos reads forward"></div>
+            <div class="carousel-slide" data-caption="Perfil de qualidade após trimming e filtragem"><img src="img/quality_trim_F.jpg" alt="Perfil de qualidade após trimming"></div>
+          </div>
+          <button class="carousel-nav carousel-prev" aria-label="Anterior">‹</button>
+          <button class="carousel-nav carousel-next" aria-label="Próximo">›</button>
+        </div>
+        <div class="carousel-meta">
+          <span class="carousel-caption"></span>
+          <span class="carousel-counter"></span>
+        </div>
+        <div class="carousel-dots"></div>
       </div>
     </div>
   </div>
