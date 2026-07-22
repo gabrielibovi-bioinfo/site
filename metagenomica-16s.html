@@ -33,7 +33,7 @@
     <h1>Metagenômica 16S rRNA</h1>
     <p class="lead">Identificação e comparação de comunidades microbianas presentes em amostras ambientais, clínicas ou industriais.</p>
     <div class="pill-row">
-      <span class="pill">Illumina</span><span class="pill">Nanopore</span><span class="pill">QIIME2</span><span class="pill">DADA2</span><span class="pill">Kraken2</span><span class="pill">Picrust2</span>
+      <span class="pill">Illumina</span><span class="pill">Nanopore</span><span class="pill">QIIME2</span><span class="pill">DADA2</span><span class="pill">Kraken2</span><span class="pill">PICRUSt2</span>
     </div>
   </div>
 </div>
@@ -51,6 +51,8 @@
         <li><span class="step-num">02</span><span><strong>Agrupamento</strong> — inferência de ASVs (DADA2) ou OTUs (QIIME2) a partir dos reads filtrados.</span></li>
         <li><span class="step-num">03</span><span><strong>Classificação taxonômica</strong> — contra bancos SILVA, GTDB ou MiDAS.</span></li>
         <li><span class="step-num">04</span><span><strong>Análise de diversidade</strong> — diversidade alfa e beta.</span></li>
+        <li><span class="step-num">04</span><span><strong>Abundância relativa</strong> — composição taxonômica.</span></li>
+        <li><span class="step-num">04</span><span><strong>Análise funcional</strong> — prever funções metabólicas a partir das ASVs com PICRUSt2.</span></li>
         <li><span class="step-num">05</span><span><strong>Relatório</strong> — explicação da metodologia e resultados.</span></li>
       </ul>
     </div>
@@ -66,11 +68,11 @@
             <div class="carousel-slide" data-caption="Perfil de qualidade após trimming e filtragem"><img src="img/quality_trim_F.jpg" alt="Perfil de qualidade após trimming"></div>
             <div class="carousel-slide" data-caption="Taxas de erro estimadas pelo modelo do DADA2"><img src="img/plotErrors_F.jpg" alt="Taxas de erro do DADA2"></div>
             <div class="carousel-slide" data-caption="Curva de rarefação por amostra"><img src="img/rarecurve.jpg" alt="Curva de rarefação"></div>
-            <div class="carousel-slide" data-caption="Riqueza de espécies (diversidade alfa) por amostra"><img src="img/richness.jpg" alt="Riqueza de espécies por amostra"></div>
+            <div class="carousel-slide" data-caption="Riqueza de espécies (diversidade alfa) por amostra"><img src="img/richness.jpg" alt="Riqueza de espécies (diversidade alfa) por amostra"></div>
             <div class="carousel-slide" data-caption="NMDS — diversidade beta entre amostras"><img src="img/plot_beta_NMDS.jpg" alt="NMDS de diversidade beta"></div>
             <div class="carousel-slide" data-caption="PCoA — diversidade beta entre amostras"><img src="img/plot_beta_PCoA.jpg" alt="PCoA de diversidade beta"></div>
-            <div class="carousel-slide" data-caption="Composição taxonômica — barras empilhadas por amostra"><img src="img/barplot_f.jpg" alt="Composição taxonômica em barras empilhadas"></div>
-            <div class="carousel-slide" data-caption="Abundância funcional normalizada por família"><img src="img/func_norm_family_2.jpg" alt="Abundância funcional normalizada por família"></div>
+            <div class="carousel-slide" data-caption="Abundância relativa em gráfico de barras empilhadas"><img src="img/barplot_f.jpg" alt="Abundância relativa em gráfico de barras empilhadas"></div>
+            <div class="carousel-slide" data-caption="Funções metabólicas (AOB, NOB, DNB, PAO e GAO) das 5 famílias mais abundantes"><img src="img/func_norm_family_2.jpg" alt="Funções metabólicas (AOB, NOB, DNB, PAO e GAO) das 5 famílias mais abundantes"></div>
           </div>
           <button class="carousel-nav carousel-prev" aria-label="Anterior">‹</button>
           <button class="carousel-nav carousel-next" aria-label="Próximo">›</button>
