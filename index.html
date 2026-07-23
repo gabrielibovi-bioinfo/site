@@ -151,13 +151,13 @@
       <p>Conte um pouco sobre sua amostra e o objetivo da análise — a mensagem chega direto no meu e-mail e eu retorno com uma proposta.</p>
     </div>
 
-    <form action="https://formsubmit.co/84f9174f50a082d6e9f2f209e5649713" method="POST" class="contact-form">
-      <input type="hidden" name="_subject" value="Novo contato pelo site — Ômix Bioinformática">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://gabrielibovi-bioinfo.github.io/site/index.html#contato">
-      <input type="text" name="_honey" style="display:none">
-
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+      <input type="hidden" name="access_key" value="48703e50-cb6a-43b0-a12e-1e1dc2328b32">
+      <input type="hidden" name="subject" value="Novo contato pelo site — Ômix Bioinformática">
+      <input type="hidden" name="from_name" value="Site Ômix Bioinformática">
+      <input type="hidden" name="redirect" value="https://gabrielibovi-bioinfo.github.io/site/index.html#contato">
+      <input type="checkbox" name="botcheck" style="display:none">
+ 
       <div class="form-row">
         <div class="form-field">
           <label for="f-name">Nome</label>
@@ -168,12 +168,12 @@
           <input type="email" id="f-email" name="Email" required>
         </div>
       </div>
-
+ 
       <div class="form-field">
         <label for="f-msg">Sobre sua amostra / análise de interesse</label>
-        <textarea id="f-msg" name="Mensagem" rows="5" placeholder="Ex: tenho amostras de solo sequenciadas em Illumina e preciso de análise 16S. São 6 amostras de controle e tratamento (N=3) e quero o gráfico de abundância relativa, rarefação, índices alfa, PCoA, e no gráfico de funções metabólicas quero analisar outras vias metabólicas.." required></textarea>
+        <textarea id="f-msg" name="Mensagem" rows="5" placeholder="Ex: tenho amostras de solo sequenciadas em Illumina e preciso de análise 16S. São 6 amostras de controle e tratamento (N=3) e quero o gráfico de abundância relativa, rarefação, índices alfa, PCoA, e no gráfico de funções metabólicas quero analisar outras vias metabólicas..." required></textarea>
       </div>
-
+ 
       <button type="submit" class="btn btn-primary">Enviar mensagem</button>
     </form>
   </div>
