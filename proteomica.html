@@ -29,11 +29,11 @@
 
 <div class="detail-hero">
   <div class="container">
-    <p class="breadcrumb"><a href="index.html">home</a> / proteômica quantitativa</p>
+    <p class="breadcrumb"><a href="index.html">home</a> / Proteômica quantitativa</p>
     <h1>Proteômica Quantitativa</h1>
-    <p class="lead">Identificação e quantificação de proteínas expressas em uma amostra a partir de dados de espectrometria de massas — label-free, TMT ou DIA.</p>
+    <p class="lead">Identificação e quantificação de proteínas expressas em uma amostra a partir de dados de espectrometria de massas — LFQ e TMT.</p>
     <div class="pill-row">
-      <span class="pill">MaxQuant</span><span class="pill">Perseus</span><span class="pill">Spectronaut (DIA)</span><span class="pill">GO / KEGG / Reactome</span>
+      <span class="pill">Proteômica</span><span class="pill">proteoDA</span><span class="pill">limma/ DEqMS</span><span class="pill">GO/ KEGG/ Reactome</span>
     </div>
   </div>
 </div>
@@ -42,65 +42,23 @@
   <div class="container two-col">
     <div class="detail-block">
       <h2>O que essa análise revela</h2>
-      <p>Enquanto a genômica mostra o que <em>poderia</em> ser expresso, a proteômica mostra <strong>quais proteínas estão de fato presentes</strong> em uma amostra, e em que quantidade — a camada mais próxima do fenótipo biológico.</p>
-      <p>Comparamos grupos experimentais (ex: tratado vs. controle) para identificar quais proteínas variam significativamente, e quais vias biológicas essas proteínas ativam ou reprimem.</p>
+      <p>Enquanto a genômica mostra o que <em>poderia</em> ser expresso, a proteômica mostra <strong>quais proteínas estão de fato presentes</strong> em uma amostra e quantidade — mais próximo do fenótipo biológico.</p>
+      <p>Identificar as proteínas diferencialmente expressas (DEPs) e as vias metabólicas up ou down-regulated.</p>
 
       <h2 style="margin-top:32px;">Etapas do pipeline</h2>
       <ul class="step-list">
-        <li><span class="step-num">01</span><span><strong>Processamento de espectros</strong> — identificação e quantificação com MaxQuant ou Spectronaut (DIA).</span></li>
-        <li><span class="step-num">02</span><span><strong>Controle de qualidade e normalização</strong> — remoção de contaminantes e ajuste entre amostras.</span></li>
-        <li><span class="step-num">03</span><span><strong>Análise estatística diferencial</strong> — teste t/limma entre grupos experimentais.</span></li>
-        <li><span class="step-num">04</span><span><strong>Enriquecimento funcional</strong> — vias biológicas associadas às proteínas alteradas (GO, KEGG, Reactome).</span></li>
-        <li><span class="step-num">05</span><span><strong>Relatório com figuras prontas para publicação.</strong></span></li>
+        <li><span class="step-num">01</span><span><strong>Controle de qualidade e normalização</strong> — remoção de contaminantes e ajuste entre amostras.</span></li>
+        <li><span class="step-num">02</span><span><strong> Normalização</strong> — proteoDA para pré-processamento, normalização e análise estatística.</span></li>
+        <li><span class="step-num">03</span><span><strong>Análise estatística diferencial</strong> — limma entre grupos experimentais.</span></li>
+        <li><span class="step-num">04</span><span><strong>Enriquecimento funcional</strong> — vias biológicas associadas às proteínas alteradas (GO, KEGG e Reactome).</span></li>
+        <li><span class="step-num">05</span><span><strong>Relatório</strong> — explicação da metodologia e resultados.</span></li>
       </ul>
     </div>
-
-    <div>
-      <h2 style="font-size:20px;margin-bottom:14px;">Gráficos entregues</h2>
-
-      <div class="chart-card">
-        <p class="chart-title">Volcano plot — proteínas diferencialmente expressas</p>
-        <svg viewBox="0 0 400 180" role="img"><title>Volcano plot de proteínas diferencialmente expressas</title>
-          <line x1="30" y1="150" x2="380" y2="150" stroke="#5C6862" stroke-width="1"/>
-          <line x1="200" y1="20" x2="200" y2="150" stroke="#5C6862" stroke-width="0.5" stroke-dasharray="3,3"/>
-          <line x1="30" y1="90" x2="380" y2="90" stroke="#5C6862" stroke-width="0.5" stroke-dasharray="3,3"/>
-          <g fill="#93A098">
-            <circle cx="80" cy="120" r="3.5"/><circle cx="110" cy="110" r="3.5"/><circle cx="150" cy="100" r="3.5"/>
-            <circle cx="250" cy="105" r="3.5"/><circle cx="280" cy="115" r="3.5"/>
-          </g>
-          <g fill="#9B87F5">
-            <circle cx="70" cy="45" r="4"/><circle cx="90" cy="30" r="4"/><circle cx="60" cy="60" r="4"/>
-          </g>
-          <g fill="#3FBF7F">
-            <circle cx="320" cy="35" r="4"/><circle cx="340" cy="50" r="4"/><circle cx="300" cy="60" r="4"/>
-          </g>
-          <text x="65" y="20" font-family="IBM Plex Mono" font-size="9" fill="#9B87F5">↓ regulado</text>
-          <text x="300" y="20" font-family="IBM Plex Mono" font-size="9" fill="#3FBF7F">↑ regulado</text>
-        </svg>
-      </div>
-
-      <div class="chart-card">
-        <p class="chart-title">Heatmap de abundância por grupo</p>
-        <svg viewBox="0 0 400 150" role="img"><title>Heatmap de abundância de proteínas</title>
-          <g>
-            <rect x="60" y="20" width="45" height="20" fill="#3FBF7F"/><rect x="105" y="20" width="45" height="20" fill="#1F6B45"/>
-            <rect x="60" y="42" width="45" height="20" fill="#9B87F5"/><rect x="105" y="42" width="45" height="20" fill="#4E4483"/>
-            <rect x="60" y="64" width="45" height="20" fill="#E2704C"/><rect x="105" y="64" width="45" height="20" fill="#7A3A26"/>
-            <rect x="60" y="86" width="45" height="20" fill="#4E4483"/><rect x="105" y="86" width="45" height="20" fill="#3FBF7F"/>
-            <rect x="60" y="108" width="45" height="20" fill="#1F6B45"/><rect x="105" y="108" width="45" height="20" fill="#9B87F5"/>
-          </g>
-          <g font-family="IBM Plex Mono" font-size="9" fill="#93A098">
-            <text x="82" y="14" text-anchor="middle">Controle</text>
-            <text x="127" y="14" text-anchor="middle">Tratado</text>
-          </g>
-        </svg>
-      </div>
-    </div>
   </div>
-
+    
   <div class="container">
     <div class="back-cta">
-      <div><h3>Tem dados de espectrometria de massas?</h3><p>Envie o instrumento usado e o desenho experimental para orientarmos a análise.</p></div>
+      <div><h3>Tem dados de espectrometria de massas?</h3><p>Envie por e-mail algumas informações sobre sua amostra para receber o orçamento. O valor varia de acordo com a quantidade de amostras e a complexidade da análise ou dos gráficos personalizados — normalmente entre R$ 500 e R$ 900, com nota fiscal de serviço.</p></div>
       <a href="index.html#contato" class="btn btn-primary">Solicitar orçamento</a>
     </div>
   </div>
