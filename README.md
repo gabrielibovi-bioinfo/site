@@ -5,7 +5,7 @@
 ---
 🔗 **Site publicado:** https://gabrielibovi-bioinfo.github.io/site/
 
-##Sobre
+## Sobre
 
 Landing page com páginas de detalhe para cada tipo de análise oferecida, formulário de contato integrado (via Web3Forms) e busca interna por serviço.
 
@@ -22,12 +22,12 @@ Estrutura do projeto
 └── img/                         # Figuras de exemplo (gráficos reais de análises)
 ```
 
-##Tecnologias
+## Tecnologias
 - HTML, CSS e JavaScript puro (sem framework e build step)
 - Formulário de contato via Web3Forms (sem backend próprio)
 - Hospedado gratuitamente via GitHub Pages
 
-##Rodando localmente
+## Rodando localmente
 Não é necessário nenhum processo de build. Basta clonar o repositório e abrir index.html no navegador:
 
 ```
@@ -37,5 +37,5 @@ cd site
 open index.html   # ou dois cliques no arquivo
 ```
 
-##Contato
+## Contato
 📧 gabrieli.bioinfo@gmail.com
