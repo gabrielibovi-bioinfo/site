@@ -1,14 +1,14 @@
 // ---------- Search index (shared across all pages) ----------
 const SEARCH_INDEX = [
-  { title: "Metagenômica 16S & Shotgun", tag: "Illumina / Nanopore", url: "metagenomica-16s.html",
+  { title: "Metagenômica 16S", tag: "Illumina / Nanopore", url: "metagenomica-16s.html",
     keywords: "16s rrna shotgun illumina nanopore microbioma solo agua fezes taxonomia diversidade qiime dada2 kraken metaphlan" },
   { title: "Metagenômica viral", tag: "Viroma", url: "metagenomica-viral.html",
     keywords: "viroma virus viral one health epidemiologia spades virsorter contigs filogenia" },
-  { title: "Proteômica quantitativa", tag: "Label-free / TMT / DIA", url: "proteomica.html",
+  { title: "Proteômica quantitativa", tag: "LFQ/ TMT", url: "proteomica.html",
     keywords: "proteomica espectrometria de massas maxquant perseus spectronaut dia tmt proteinas" },
-  { title: "Transcriptômica", tag: "RNA-seq bulk & single-cell", url: "transcriptomica.html",
+  { title: "Transcriptômica", tag: "RNA-seq", url: "transcriptomica.html",
     keywords: "transcriptomica rna-seq rnaseq expressao genica deseq2 edger seurat scanpy single cell scrna umap" },
-  { title: "Variant calling & genômica clínica", tag: "WGS / WES", url: "variant-calling.html",
+  { title: "Variant calling", tag: "WGS / WES", url: "variant-calling.html",
     keywords: "variant calling genomica clinica gatk wgs wes snp indel cnv variantes vep annovar manhattan" },
   { title: "Home", tag: "Página inicial", url: "index.html", keywords: "home inicio servicos" },
   { title: "Sobre", tag: "Quem somos", url: "index.html#sobre", keywords: "sobre empresa equipe quem somos" },
@@ -51,7 +51,7 @@ function initTerminal(){
     { html: `<span class="tag-out" style="background:var(--green-dim);color:var(--green);">QC</span> 2.1M reads · Q30 96.4%` },
     { html: `<span class="tag-out" style="background:var(--purple-dim);color:var(--purple);">TAXONOMIA</span> 340 ASVs classificados (SILVA)` },
     { html: `<span class="tag-out" style="background:var(--coral-dim);color:var(--coral);">DIVERSIDADE</span> Shannon: 4.82 · Chao1: 512` },
-    { html: `<span class="prompt">✓</span> relatório gerado em <span class="cmd">report_16s.html</span>` },
+    { html: `<span class="prompt">✓</span> relatório gerado em <span class="cmd">report_16s.pdf</span>` },
   ];
 
   let i = 0;
