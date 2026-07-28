@@ -1,17 +1,14 @@
 // ---------- Search index (shared across all pages) ----------
 const SEARCH_INDEX = [
-  { title: "Metagenômica 16S", tag: "Illumina / Nanopore", url: "metagenomica-16s.html",
-    keywords: "16s rrna shotgun illumina nanopore microbioma solo agua fezes taxonomia diversidade qiime dada2 kraken metaphlan" },
-  { title: "Metagenômica viral", tag: "Viroma", url: "metagenomica-viral.html",
-    keywords: "viroma virus viral one health epidemiologia spades virsorter contigs filogenia" },
-  { title: "Proteômica quantitativa", tag: "LFQ/ TMT", url: "proteomica.html",
-    keywords: "proteomica espectrometria de massas maxquant perseus spectronaut dia tmt proteinas" },
-  { title: "Transcriptômica", tag: "RNA-seq", url: "transcriptomica.html",
-    keywords: "transcriptomica rna-seq rnaseq expressao genica deseq2 edger seurat scanpy single cell scrna umap" },
-  { title: "Variant calling", tag: "WGS / WES", url: "variant-calling.html",
-    keywords: "variant calling genomica clinica gatk wgs wes snp indel cnv variantes vep annovar manhattan" },
-  { title: "Home", tag: "Página inicial", url: "index.html", keywords: "home inicio servicos" },
-  { title: "Sobre", tag: "Quem somos", url: "index.html#sobre", keywords: "sobre empresa equipe quem somos" },
+  { title: "Metagenômica 16S", tag: "16S", url: "metagenomica-16s.html", keywords: "metagenômica 16s rrna shotgun illumina nanopore microbioma solo agua fezes taxonomia diversidade qiime dada2 kraken metaphlan" },
+  { title: "Metagenômica viral", tag: "Viroma", url: "metagenomica-viral.html", keywords: "viroma virus viral one health epidemiologia spades virsorter contigs filogenia" },
+  { title: "Proteômica", tag: "Proteômica", url: "proteomica.html", keywords: "proteomica espectrometria de massas maxquant perseus spectronaut dia tmt proteinas" },
+  { title: "Transcriptômica", tag: "RNA-seq", url: "transcriptomica.html", keywords: "transcriptomica rna-seq rnaseq expressao genica deseq2 edger seurat scanpy single cell scrna umap" },
+  { title: "Variant calling", tag: "Variant calling", url: "variant-calling.html", keywords: "variant calling genomica clinica gatk wgs wes snp indel cnv variantes vep annovar manhattan" },
+  { title: "Home", tag: "Página inicial", url: "index.html", keywords: "home inicio servicos contato" },
+  { title: "Sobre", tag: "Quem somos", url: "index.html#sobre", keywords: "sobre empresa equipe quem somos contato" },
+  { title: "Serviços", tag: "Análises disponíveis", url: "index.html#servicos", keywords: "ver analises disponiveis" },
+  { title: "Contato", tag: "Solicitar orçamento", url: "index.html#contato", keywords: "contato solicitar orcamento" },
 ];
 
 function initSearch(){
