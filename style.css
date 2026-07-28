@@ -50,11 +50,11 @@ img,svg{max-width:100%;display:block;}
   display:flex;align-items:center;gap:24px;}
 
 .brand-logo{
-    max-width:32px;
-    max-height:32px;
-    width:32px;
-    height:32px;
-    flex-shrink:0;}
+    width:32px !important;
+    height:32px !important;
+    object-fit:contain;
+    display:block;
+}
 
 .brand{font-family:var(--mono);font-size:16px;font-weight:500;
   display:flex;align-items:center;gap:8px;white-space:nowrap;color:var(--text);}
