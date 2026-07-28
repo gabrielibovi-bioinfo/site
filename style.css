@@ -50,7 +50,7 @@ img,svg{max-width:100%;display:block;}
   display:flex;align-items:center;gap:24px;}
 
 .brand-logo{width:50px !important;height:50px !important;
-    object-fit:contain;display:block;}
+    object-fit:contain;display:block;gap:8px;}
 
 .brand{font-family:var(--mono);font-size:16px;font-weight:500;
   display:flex;align-items:center;gap:8px;white-space:nowrap;color:var(--text);}
