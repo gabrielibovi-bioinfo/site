@@ -8,7 +8,7 @@ const SEARCH_INDEX = [
   { title: "Home", tag: "Página inicial", url: "index.html", keywords: "home inicio servicos contato" },
   { title: "Sobre", tag: "Quem somos", url: "index.html#sobre", keywords: "sobre empresa equipe quem somos contato" },
   { title: "Serviços", tag: "Análises disponíveis", url: "index.html#servicos", keywords: "ver analises disponiveis" },
-  { title: "Contato", tag: "Solicitar orçamento", url: "index.html#contato", keywords: "contato solicitar orcamento" },
+  { title: "Contato", tag: "Solicitar orçamento", url: "index.html#contato", keywords: "contato solicitar orcamento orçamento preco preço valor" },
 ];
 
 function initSearch(){
