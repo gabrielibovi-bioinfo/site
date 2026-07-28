@@ -12,11 +12,11 @@ Landing page com páginas de detalhe para cada tipo de análise oferecida, formu
 ```
 Estrutura do projeto
 ├── index.html                  # Página inicial (home, sobre, contato)
-├── metagenomica-16s.html        # Metagenômica 16S rRNA & shotgun (Illumina/Nanopore)
+├── metagenomica-16s.html        # Metagenômica 16S rRNA
 ├── metagenomica-viral.html      # Metagenômica viral (viroma)
-├── proteomica.html              # Proteômica quantitativa (label-free, TMT, DIA)
-├── transcriptomica.html         # Transcriptômica (RNA-seq bulk & single-cell)
-├── variant-calling.html         # Variant calling & genômica clínica
+├── proteomica.html              # Proteômica quantitativa (label-free, TMT)
+├── transcriptomica.html         # Transcriptômica (RNA-seq bulk)
+├── variant-calling.html         # Variant calling
 ├── style.css                    # Estilos compartilhados por todas as páginas
 ├── script.js                    # Busca, animação do terminal e carrossel de imagens
 └── img/                         # Figuras de exemplo (gráficos reais de análises)
