@@ -97,7 +97,7 @@ img,svg{max-width:100%;display:block;}
 .cta-row{display:flex;gap:12px;flex-wrap:wrap;}
 .btn{
   display:inline-flex;align-items:center;gap:8px;
-  padding:11px 20px;border-radius:8px;font-size:15px;font-weight:500;
+  padding:11px 20px;border-radius:8px;font-size:16px;font-weight:500;
   border:1px solid var(--border-strong);cursor:pointer;transition:transform .15s ease;
 }
 .btn:hover{transform:translateY(-1px);}
