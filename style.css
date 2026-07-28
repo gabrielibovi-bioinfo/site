@@ -87,7 +87,7 @@ img,svg{max-width:100%;display:block;}
 .search-empty{padding:10px 12px;font-size:14px;color:var(--text-tertiary);}
 
 /* ---------- HERO ---------- */
-.hero{padding:18px 0 64px;}
+.hero{padding:78px 0 54px;}
 .hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;}
 .eyebrow{
   font-family:var(--mono);font-size:12px;color:var(--green);
