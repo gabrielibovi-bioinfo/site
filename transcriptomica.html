@@ -43,15 +43,15 @@
   <div class="container two-col">
     <div class="detail-block">
       <h2>O que essa análise revela</h2>
-      <p>A expressão média de genes em uma amostra inteira — ideal para comparar condições (doença vs. saudável, tratado vs. controle).</p>
+      <p>A expressão média de genes em uma amostra inteira — ideal para comparar condições (tratado vs. controle).</p>
 
       <h2 style="margin-top:32px;">Etapas do pipeline</h2>
       <ul class="step-list">
         <li><span class="step-num">01</span><span><strong>Controle de qualidade</strong> — remoção de adaptadores e reads de baixa qualidade (fastp/FastQC).</span></li>
-        <li><span class="step-num">02</span><span><strong>Alinhamento/ pseudo-alinhamento</strong> — STAR ou Salmon contra genoma/transcriptoma de referência.</span></li>
+        <li><span class="step-num">02</span><span><strong>Alinhamento/pseudo-alinhamento</strong> — STAR ou Salmon contra genoma/transcriptoma de referência.</span></li>
         <li><span class="step-num">03</span><span><strong>Quantificação</strong> — contagem de reads por gene/transcrito.</span></li>
         <li><span class="step-num">04</span><span><strong>Análise diferencial</strong> — com DESeq2.</span></li>
-        <li><span class="step-num">05</span><span><strong>Enriquecimento funcional</strong> — GSEA (Gene Ontology, KEGG e Reactome).</span></li>
+        <li><span class="step-num">05</span><span><strong>Enriquecimento funcional</strong> — ORA e GSEA com Gene Ontology, KEGG e Reactome.</span></li>
         <li><span class="step-num">06</span><span><strong>Análise de redes</strong> — com STRING, cnetplot e emapplot.</span></li>
         <li><span class="step-num">07</span><span><strong>Relatório</strong> — explicação da metodologia e resultados.</span></li>
       </ul>
@@ -68,7 +68,7 @@
             <div class="carousel-slide" data-caption="Gráfico MA para análise da expressão diferencial."><img src="img/05_plotMA.jpg" alt="Gráfico MA para análise da expressão diferencial."></div>
             <div class="carousel-slide" data-caption="Volcano plot para visualizar genes de expressão diferencial (DEG)."><img src="img/06_EnhancedVolcano.jpg" alt="Volcano plot para visualizar genes de expressão diferencial."></div>
             <div class="carousel-slide" data-caption="Comparação do perfil das amostras com heatmap dos DEG."><img src="img/07_heatmap_DEGs.jpg" alt="Comparação do perfil das amostras com heatmap dos DEG."></div>
-            <div class="carousel-slide" data-caption="Gene Ontology (GO) descreve a função dos genes, separando em: processo biológico, função molecular e componente celular."><img src="img/11A_GSEA_GO_dotplot.jpg" alt="Gene Ontology (GO) descreve a função dos genes, separando em: processo biológico, função molecular e componente celular."></div>
+            <div class="carousel-slide" data-caption="Gene Ontology (GO) descreve a função dos genes, separando em processo biológico, função molecular e componente celular."><img src="img/11A_GSEA_GO_dotplot.jpg" alt="Gene Ontology (GO) descreve a função dos genes, separando em processo biológico, função molecular e componente celular."></div>
             <div class="carousel-slide" data-caption="Gráfico ridgeline mostra a distribuição dos níveis de expressão e p-valor."><img src="img/11B_GSEA_GO_ridgeplot.jpg" alt="Gráfico ridgeline mostra a distribuição dos níveis de expressão e p-valor."></div>
             <div class="carousel-slide" data-caption="Rede de interações proteína-proteína (PPI) para identificar genes centrais."><img src="img/12A_PPI_network.jpg" alt="Rede de interações proteína-proteína (PPI) para identificar genes centrais."></div>
             <div class="carousel-slide" data-caption="Gene-Concept Network para visualizar conexões entre genes e vias metabólicas."><img src="img/12B_GSEA_GO_cnetplot.jpg" alt="Gene-Concept Network para visualizar conexões entre genes e vias metabólicas."></div>
