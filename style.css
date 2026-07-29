@@ -83,6 +83,45 @@ img,svg{max-width:100%;display:block;}
 .search-results .sr-tag{color:var(--text-tertiary);font-size:13px;font-family:var(--mono);}
 .search-empty{padding:10px 12px;font-size:14px;color:var(--text-tertiary);}
 
+/* ---------- Hamburguer button — mobile only ---------- */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform .2s, opacity .2s;
+}
+
+@media (max-width:760px) {
+  .nav-toggle { display: flex; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    padding: 16px 24px;
+    gap: 16px;
+    font-size: 15px;
+  }
+  .nav-links.open { display: flex; }
+}
+
 /* ---------- HERO ---------- */
 .hero{padding:78px 0 54px;}
 .hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;}
