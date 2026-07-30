@@ -9,18 +9,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 
-<meta name="description" content="Análise de metagenômica viral — classificação taxonômica e abundância relativa. Illumina e Nanopore.">
+<meta name="description" content="Análise de metagenômica viral em amostras clínicas e ambientais — controle de qualidade, remoção do hospedeiro, montagem de contigs e classificação taxonômica com Kraken2. Illumina e Nanopore.">
 <meta property="og:title" content="Metagenômica Viral — GB Bioinformatics">
-<meta property="og:description" content="Pipeline completo de viroma.">
+<meta property="og:description" content="Pipeline de viroma: depleção do hospedeiro (Bowtie2/Minimap2), montagem (metaSPAdes) e classificação taxonômica (Kraken2 + Krona). Illumina e Nanopore.">
 <meta property="og:url" content="https://gabrielibovi-bioinfo.github.io/site/metagenomica-viral.html">
+<meta property="og:type" content="website">
 </head>
 <body>
 
 <nav class="nav">
   <div class="nav-inner">
-    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
     <a href="index.html" class="brand"><span class="brand-dot"></span>GB Bioinformatics</a>
     <div class="nav-links">
       <a href="index.html">Home</a>
@@ -28,6 +26,9 @@
       <a href="index.html#sobre">Sobre</a>
       <a href="index.html#contato">Contato</a>
     </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
     <div class="nav-search">
       <input type="text" id="site-search" placeholder="Buscar análise..." autocomplete="off">
       <div class="search-results" id="search-results"></div>
@@ -38,10 +39,11 @@
 <div class="detail-hero">
   <div class="container">
     <p class="breadcrumb"><a href="index.html">home</a> / Metagenômica Viral</p>
-    <h1>Metagenômica Viral </h1>
-    <p class="lead">Identificação e caracterização de vírus — conhecidos e desconhecidos — presentes em amostras ambientais, clínicas ou alimentares, sem cultivo prévio.</p>
+    <h1>Metagenômica Viral</h1>
+    <p class="lead">Identificação e classificação de vírus presentes em amostras clínicas e ambientais — sem necessidade de cultivo prévio — a partir de dados de sequenciamento Illumina e Nanopore.</p>
     <div class="pill-row">
-      <span class="pill">SPAdes/MEGAHIT</span><span class="pill">VirSorter2</span><span class="pill">DIAMOND</span><span class="pill">Kraken2</span><span class="pill">Krona</span>
+      <span class="pill">Illumina / Nanopore</span><span class="pill">fastp / NanoFilt</span><span class="pill">Bowtie2 / Minimap2</span><span class="pill">metaSPAdes</span><span class="pill">Kraken2</span><span class="pill">Krona</span>
+    
     </div>
   </div>
 </div>
