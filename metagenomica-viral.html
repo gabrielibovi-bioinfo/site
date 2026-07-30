@@ -52,20 +52,21 @@
   <div class="container two-col">
     <div class="detail-block">
       <h2>O que essa análise revela</h2>
-      <p>A partir de reads de sequenciamento, identificamos sequências de origem viral (DNA e RNA) presentes na amostra — úteis para vigilância epidemiológica, estudos de <strong>One Health</strong>, descoberta de novos vírus e controle de qualidade em alimentos e insumos biológicos.</p>
-      <p>O grande desafio dessa análise é a <strong>ausência de referências completas</strong> para muitos vírus — por isso o pipeline combina montagem de novo com busca por similaridade remota (proteica) para identificar até vírus não catalogados.</p>
+      <p>A partir de reads de sequenciamento, identificamos e classificamos sequências de origem viral presentes na amostra — úteis para vigilância epidemiológica, diagnóstico de infecções sem etiologia definida, estudos de <strong>One Health</strong> e monitoramento ambiental.</p>
+      <p>O pipeline combina a <strong>remoção eficiente de sequências do hospedeiro</strong> com montagem de novo e classificação taxonômica contra bancos de dados virais curados — permitindo detectar tanto vírus conhecidos quanto sequências divergentes.</p>
 
       <h2 style="margin-top:32px;">Etapas do pipeline</h2>
       <ul class="step-list">
-        <li><span class="step-num">01</span><span><strong>Depleção do hospedeiro</strong> — remoção de reads que não são de origem viral.</span></li>
-        <li><span class="step-num">02</span><span><strong>Montagem de novo</strong> — reconstrução de genomas/contigs virais (SPAdes/MEGAHIT).</span></li>
-        <li><span class="step-num">03</span><span><strong>Identificação viral</strong> — VirSorter2 e busca por similaridade (DIAMOND) contra bancos virais.</span></li>
-        <li><span class="step-num">04</span><span><strong>Anotação funcional</strong> — genes e proteínas virais identificados nos contigs.</span></li>
-        <li><span class="step-num">05</span><span><strong>Análise filogenética</strong> — posicionamento evolutivo das sequências encontradas.</span></li>
+        <li><span class="step-num">01</span><span><strong>Controle de qualidade e trimagem</strong> — remoção de adaptadores e reads de baixa qualidade. Relatório de qualidade gerado com FastQC e MultiQC.</span></li>
+        <li><span class="step-num">02</span><span><strong>Remoção de contaminantes do hospedeiro</strong> — alinhamento das reads contra o genoma do hospedeiro (humano ou ambiental) e descarte das reads mapeadas, mantendo apenas as de origem não-hospedeiro.</span></li>
+        <li><span class="step-num">03</span><span><strong>Montagem de contigs</strong> — reconstrução de sequências virais a partir das reads filtradas com <em>metaSPAdes</em>. Gera contigs mais longos e contíguos, aumentando a resolução da classificação taxonômica em comparação à classificação direta por read.</span></li>
+        <li><span class="step-num">04</span><span><strong>Classificação taxonômica</strong> — <em>Kraken2</em> classifica os contigs contra banco de dados viral (RefSeq viral + GenBank), gerando tabelas de abundância relativa por táxon.</span></li>
+        <li><span class="step-num">05</span><span><strong>Visualização</strong> — <em>Krona</em> gera gráfico interativo de composição viral em formato de círculos concêntricos, permitindo explorar a hierarquia taxonômica.</span></li>
+        <li><span class="step-num">06</span><span><strong>Relatório</strong> — descrição completa da metodologia, parâmetros utilizados e interpretação dos resultados, pronto para inclusão em manuscrito ou relatório técnico.</span></li>
       </ul>
-    </div>
-
-    div>
+    </div>   
+    
+    <div>
       <h2 style="font-size:20px;margin-bottom:14px;">Gráficos entregues</h2>
       <p style="color:var(--text-secondary);font-size:13.5px;margin-bottom:16px;">Exemplos reais gerados com dados públicos.</p>
 
