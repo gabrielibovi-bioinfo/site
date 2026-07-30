@@ -24,8 +24,8 @@
     <a href="index.html" class="brand"><span class="brand-dot"></span>GB Bioinformatics</a>
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="index.html#sobre">Sobre</a>
       <a href="index.html#servicos">Serviços</a>
+      <a href="index.html#sobre">Sobre</a>
       <a href="index.html#contato">Contato</a>
     </div>
     <div class="nav-search">
@@ -41,7 +41,7 @@
     <h1>Metagenômica Viral </h1>
     <p class="lead">Identificação e caracterização de vírus — conhecidos e desconhecidos — presentes em amostras ambientais, clínicas ou alimentares, sem cultivo prévio.</p>
     <div class="pill-row">
-      <span class="pill">SPAdes / MEGAHIT</span><span class="pill">VirSorter2</span><span class="pill">DIAMOND</span><span class="pill">One Health</span>
+      <span class="pill">SPAdes/MEGAHIT</span><span class="pill">VirSorter2</span><span class="pill">DIAMOND</span><span class="pill">Kraken2</span><span class="pill">Krona</span>
     </div>
   </div>
 </div>
@@ -63,44 +63,23 @@
       </ul>
     </div>
 
-    <div>
+    div>
       <h2 style="font-size:20px;margin-bottom:14px;">Gráficos entregues</h2>
+      <p style="color:var(--text-secondary);font-size:13.5px;margin-bottom:16px;">Exemplos reais gerados com dados públicos.</p>
 
-      <div class="chart-card">
-        <p class="chart-title">Árvore filogenética dos contigs virais</p>
-        <svg viewBox="0 0 400 180" role="img"><title>Árvore filogenética simplificada</title>
-          <g stroke="#E2704C" stroke-width="1.5" fill="none">
-            <path d="M30,90 L70,90 M70,90 L70,40 M70,40 L120,40 M70,90 L70,140 M70,140 L120,140"/>
-            <path d="M120,40 L120,20 M120,20 L170,20 M120,40 L120,60 M120,60 L170,60"/>
-            <path d="M120,140 L120,120 M120,120 L170,120 M120,140 L120,160 M120,160 L170,160"/>
-          </g>
-          <g font-family="IBM Plex Mono" font-size="9" fill="#93A098">
-            <text x="175" y="23">contig_014 (Siphoviridae)</text>
-            <text x="175" y="63">contig_002 (Podoviridae)</text>
-            <text x="175" y="123">contig_031 (não classificado)</text>
-            <text x="175" y="163">contig_009 (Myoviridae)</text>
-          </g>
-        </svg>
-      </div>
-
-      <div class="chart-card">
-        <p class="chart-title">Abundância relativa de famílias virais</p>
-        <svg viewBox="0 0 400 160" role="img"><title>Gráfico de barras de abundância de famílias virais</title>
-          <g fill="#E2704C">
-            <rect x="40" y="40" width="40" height="100"/>
-            <rect x="110" y="70" width="40" height="70"/>
-            <rect x="180" y="90" width="40" height="50"/>
-            <rect x="250" y="105" width="40" height="35"/>
-            <rect x="320" y="120" width="40" height="20"/>
-          </g>
-          <g font-family="IBM Plex Mono" font-size="8.5" fill="#93A098">
-            <text x="60" y="152" text-anchor="middle">Sipho.</text>
-            <text x="130" y="152" text-anchor="middle">Podo.</text>
-            <text x="200" y="152" text-anchor="middle">Myo.</text>
-            <text x="270" y="152" text-anchor="middle">Micro.</text>
-            <text x="340" y="152" text-anchor="middle">Outras</text>
-          </g>
-        </svg>
+      <div class="carousel">
+        <div class="carousel-viewport">
+          <div class="carousel-track">
+            <div class="carousel-slide" data-caption="Gráfico Krona."><img src="img/krona.jpg" alt="Gráfico Krona."></div>
+          </div>
+          <button class="carousel-nav carousel-prev" aria-label="Anterior">‹</button>
+          <button class="carousel-nav carousel-next" aria-label="Próximo">›</button>
+        </div>
+        <div class="carousel-meta">
+          <span class="carousel-caption"></span>
+          <span class="carousel-counter"></span>
+        </div>
+        <div class="carousel-dots"></div>
       </div>
     </div>
   </div>
