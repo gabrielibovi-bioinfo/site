@@ -1,0 +1,6 @@
+https://gabrielibovi-bioinfo.github.io/site/index.html
+https://gabrielibovi-bioinfo.github.io/site/metagenomica-16s.html
+https://gabrielibovi-bioinfo.github.io/site/metagenomica-viral.html
+https://gabrielibovi-bioinfo.github.io/site/proteomica.html
+https://gabrielibovi-bioinfo.github.io/site/transcriptomica.html
+https://gabrielibovi-bioinfo.github.io/site/variant-calling.html
