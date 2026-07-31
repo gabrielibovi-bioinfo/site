@@ -46,7 +46,7 @@
     <div class="detail-block">
       <h2>O que essa análise revela</h2>
       <p>Comparamos o DNA sequenciado de um indivíduo (ou amostra) contra um genoma de referência para identificar <strong>onde e como</strong> ele difere — variações que podem estar associadas a doenças, características fenotípicas ou traços de interesse em melhoramento genético.</p>
-      <p>Aplicável a sequenciamento de genoma completo (WGS), exoma (WES) ou painéis de genes específicos, tanto para variantes germinativas (herdadas) quanto somáticas (adquiridas, ex: câncer).</p>
+      <p>Aplicável a sequenciamento de genoma completo (WGS), exoma (WES) ou painéis de genes específicos, tanto para variantes germinativas quanto somáticas.</p>
 
       <h2 style="margin-top:32px;">Etapas do pipeline</h2>
       <ul class="step-list">
@@ -65,9 +65,10 @@
       <div class="carousel">
         <div class="carousel-viewport">
           <div class="carousel-track">
-            <div class="carousel-slide" data-caption="Perfil de qualidade dos reads forward antes do processamento"><img src="img/quality_F.jpg" alt="Perfil de qualidade dos reads forward"></div>
-            <div class="carousel-slide" data-caption="Perfil de qualidade após trimming e filtragem"><img src="img/quality_trim_F.jpg" alt="Perfil de qualidade após trimming"></div>
-            <div class="carousel-slide" data-caption="Taxas de erro estimadas pelo modelo do DADA2"><img src="img/plotErrors_F.jpg" alt="Taxas de erro do DADA2"></div>
+            <div class="carousel-slide" data-caption="Perfil de qualidade das reads após trimming e filtragem."><img src="img/fastqc_per_base_sequence_quality_plot.png" alt="Perfil de qualidade das reads após trimming e filtragem."></div>
+            <div class="carousel-slide" data-caption="Heatmap de variantes por amostra — classificação ClinVar."><img src="img/heatmap_variantes_clinsig.png" alt="Heatmap de variantes por amostra — classificação ClinVar."></div>
+            <div class="carousel-slide" data-caption="Tabela-resumo de variantes por amostra e classificação clínica."><img src="img/tabela_variantes_clinvar.png" alt="Tabela-resumo de variantes por amostra e classificação clínica."></div>
+            <div class="carousel-slide" data-caption="Distribuição de tipos de variantes por amostra. SNP = troca de uma base; INS = inserção de base; DEL = deleção de base; MNP = troca de múltiplas bases."><img src="img/distribuicao_tipos_variantes.png" alt="Distribuição de tipos de variantes por amostra. SNP = troca de uma base; INS = inserção de base; DEL = deleção de base; MNP = troca de múltiplas bases."></div>
           </div>
           <button class="carousel-nav carousel-prev" aria-label="Anterior">‹</button>
           <button class="carousel-nav carousel-next" aria-label="Próximo">›</button>
