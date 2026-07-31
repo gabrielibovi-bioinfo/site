@@ -2,42 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gabrielibovi-bioinfo.github.io/site/</loc>
-    <lastmod>2026-07-29</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://gabrielibovi-bioinfo.github.io/site/index.html</loc>
-    <lastmod>2026-07-29</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gabrielibovi-bioinfo.github.io/site/index.html#servicos</loc>
-    <lastmod>2026-07-29</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gabrielibovi-bioinfo.github.io/site/index.html#sobre</loc>
-    <lastmod>2026-07-29</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gabrielibovi-bioinfo.github.io/site/index.html#contato</loc>
-    <lastmod>2026-07-29</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gabrielibovi-bioinfo.github.io/site/metagenomica-16s.html</loc>
-    <lastmod>2026-07-29</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gabrielibovi-bioinfo.github.io/site/transcriptomica.html</loc>
-    <lastmod>2026-07-29</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gabrielibovi-bioinfo.github.io/site/proteomica.html</loc>
-    <lastmod>2026-07-29</lastmod>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gabrielibovi-bioinfo.github.io/site/metagenomica-viral.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gabrielibovi-bioinfo.github.io/site/variant-calling.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>
