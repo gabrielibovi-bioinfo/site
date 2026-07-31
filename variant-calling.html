@@ -61,44 +61,21 @@
     <div>
       <h2 style="font-size:20px;margin-bottom:14px;">Gráficos entregues</h2>
 
-      <div class="chart-card">
-        <p class="chart-title">Manhattan plot — variantes por posição genômica</p>
-        <svg viewBox="0 0 400 160" role="img"><title>Manhattan plot de variantes genéticas</title>
-          <line x1="30" y1="140" x2="380" y2="140" stroke="#5C6862" stroke-width="1"/>
-          <line x1="30" y1="60" x2="380" y2="60" stroke="#5C6862" stroke-width="0.5" stroke-dasharray="3,3"/>
-          <g fill="#E0A83F">
-            <circle cx="45" cy="130" r="2.5"/><circle cx="55" cy="120" r="2.5"/><circle cx="65" cy="135" r="2.5"/>
-            <circle cx="95" cy="125" r="2.5"/><circle cx="105" cy="110" r="2.5"/><circle cx="115" cy="130" r="2.5"/>
-            <circle cx="150" cy="45" r="3"/>
-            <circle cx="175" cy="128" r="2.5"/><circle cx="185" cy="118" r="2.5"/><circle cx="195" cy="132" r="2.5"/>
-            <circle cx="230" cy="122" r="2.5"/><circle cx="240" cy="112" r="2.5"/>
-            <circle cx="270" cy="30" r="3"/>
-            <circle cx="300" cy="130" r="2.5"/><circle cx="310" cy="120" r="2.5"/><circle cx="320" cy="128" r="2.5"/>
-            <circle cx="350" cy="118" r="2.5"/><circle cx="360" cy="132" r="2.5"/>
-          </g>
-          <text x="150" y="38" font-family="IBM Plex Mono" font-size="8" fill="#E0A83F" text-anchor="middle">chr7</text>
-          <text x="270" y="24" font-family="IBM Plex Mono" font-size="8" fill="#E0A83F" text-anchor="middle">chr12</text>
-        </svg>
-      </div>
-
-      <div class="chart-card">
-        <p class="chart-title">Distribuição de tipos de variantes por amostra</p>
-        <svg viewBox="0 0 400 150" role="img"><title>Gráfico de barras de tipos de variantes</title>
-          <g fill="#E0A83F">
-            <rect x="50" y="40" width="60" height="100"/>
-          </g>
-          <g fill="#9B87F5">
-            <rect x="150" y="80" width="60" height="60"/>
-          </g>
-          <g fill="#E2704C">
-            <rect x="250" y="110" width="60" height="30"/>
-          </g>
-          <g font-family="IBM Plex Mono" font-size="9" fill="#93A098">
-            <text x="80" y="152" text-anchor="middle">SNPs</text>
-            <text x="180" y="152" text-anchor="middle">Indels</text>
-            <text x="280" y="152" text-anchor="middle">CNVs</text>
-          </g>
-        </svg>
+      <div class="carousel">
+        <div class="carousel-viewport">
+          <div class="carousel-track">
+            <div class="carousel-slide" data-caption="Perfil de qualidade dos reads forward antes do processamento"><img src="img/quality_F.jpg" alt="Perfil de qualidade dos reads forward"></div>
+            <div class="carousel-slide" data-caption="Perfil de qualidade após trimming e filtragem"><img src="img/quality_trim_F.jpg" alt="Perfil de qualidade após trimming"></div>
+            <div class="carousel-slide" data-caption="Taxas de erro estimadas pelo modelo do DADA2"><img src="img/plotErrors_F.jpg" alt="Taxas de erro do DADA2"></div>
+          </div>
+          <button class="carousel-nav carousel-prev" aria-label="Anterior">‹</button>
+          <button class="carousel-nav carousel-next" aria-label="Próximo">›</button>
+        </div>
+        <div class="carousel-meta">
+          <span class="carousel-caption"></span>
+          <span class="carousel-counter"></span>
+        </div>
+        <div class="carousel-dots"></div>
       </div>
     </div>
   </div>
