@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://gabrielibovi-bioinfo.github.io/site/sitemap.xml
+Sitemap: https://gabrielibovi-bioinfo.github.io/site/sitemap.txt
