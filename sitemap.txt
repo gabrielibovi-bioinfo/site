@@ -4,3 +4,5 @@ https://gabrielibovi-bioinfo.github.io/site/metagenomica-viral.html
 https://gabrielibovi-bioinfo.github.io/site/proteomica.html
 https://gabrielibovi-bioinfo.github.io/site/transcriptomica.html
 https://gabrielibovi-bioinfo.github.io/site/variant-calling.html
+
+https://gabrielibovi-bioinfo.github.io/site/divulgacao-cientifica.html

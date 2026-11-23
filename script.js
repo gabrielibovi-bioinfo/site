@@ -5,6 +5,8 @@ const SEARCH_INDEX = [
   { title: "Proteômica", tag: "Proteômica", url: "proteomica.html", keywords: "proteomica espectrometria de massas maxquant perseus spectronaut dia tmt proteinas" },
   { title: "Transcriptômica", tag: "RNA-seq", url: "transcriptomica.html", keywords: "transcriptomica rna-seq rnaseq expressao genica deseq2 edger seurat scanpy single cell scrna umap" },
   { title: "Variant calling", tag: "Variant calling", url: "variant-calling.html", keywords: "variant calling genomica clinica gatk wgs wes snp indel cnv variantes vep annovar manhattan" },
+  { title: "Consultoria em pesquisa", tag: "Consultoria", url: "index.html#consultoria", keywords: "consultoria estatistica estatística desenho experimental diagnostico diagnóstico metodologia projeto pesquisa" },
+  { title: "Divulgação científica", tag: "Artigos", url: "divulgacao-cientifica.html", keywords: "divulgacao cientifica 16s rrna metagenomica transcriptomica rnaseq" },
   { title: "Home", tag: "Página inicial", url: "index.html", keywords: "home inicio servicos contato" },
   { title: "Sobre", tag: "Quem somos", url: "index.html#sobre", keywords: "sobre empresa equipe quem somos contato" },
   { title: "Serviços", tag: "Análises disponíveis", url: "index.html#servicos", keywords: "ver analises disponiveis" },
@@ -19,8 +21,9 @@ function initSearch(){
   input.addEventListener('input', () => {
     const q = input.value.trim().toLowerCase();
     if(q.length < 2){ results.classList.remove('active'); results.innerHTML=''; return; }
+    const normalized = q.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     const matches = SEARCH_INDEX.filter(item =>
-      item.title.toLowerCase().includes(q) || item.keywords.includes(q)
+      item.title.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(normalized) || item.keywords.normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(normalized)
     ).slice(0,6);
 
     if(matches.length === 0){
