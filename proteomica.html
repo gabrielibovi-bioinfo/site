@@ -13,8 +13,8 @@
 <meta property="og:title" content="Proteômica Quantitativa — GB Bioinformatics">
 <meta property="og:description" content="Pipeline de proteômica: proteoDA, limma, enriquecimento GO/KEGG/Reactome e análise de redes.">
 <meta property="og:url" content="https://gabrielibovi-bioinfo.github.io/site/proteomica.html">
-<!-- Analytics: substitua SEU-DOMINIO pelo domínio cadastrado no Plausible para ativar as métricas. -->
-<script defer data-domain="SEU-DOMINIO" src="https://plausible.io/js/script.js"></script>
+
+
 </head>
 <body>
 
@@ -68,11 +68,21 @@
     </div>
   </div>
     
-  <div class="container">
-    <div class="back-cta">
-      <div><h3>Tem dados de espectrometria de massas?</h3><p>Envie por e-mail algumas informações sobre sua amostra para receber o orçamento. O valor varia de acordo com a quantidade de amostras e a complexidade da análise ou dos gráficos personalizados — normalmente entre R$ 500 e R$ 900, com nota fiscal de serviço.</p></div>
-      <a href="index.html#contato" class="btn btn-primary">Solicitar orçamento</a>
+  <div class="container pricing-section" id="investimento">
+    <div class="section-head"><p class="eyebrow">Pacotes e investimento</p><h2>Análise de proteômica quantitativa</h2><p>Estrutura de serviços para análise de dados proteômicos. O escopo final é confirmado após avaliação dos arquivos, número de amostras e desenho experimental.</p></div>
+    <div class="pricing-card">
+      <p class="eyebrow">Pacote essencial · Base obrigatória</p><div class="price">R$ 250,00</div>
+      <ul class="price-list">
+        <li>01. Controle de qualidade e processamento inicial: heatmap e PCA</li>
+        <li>02. Avaliação e seleção do método de normalização mais adequado (por exemplo, RLR, CycloESS ou VSN)</li>
+        <li>03. Análise diferencial com limma, incluindo Volcano plot, Forest plot e Barplot</li>
+      </ul>
     </div>
+    <div class="addon-list">
+      <div class="addon-card"><strong>GSEA · R$ 150,00</strong><p>Gene Set Enrichment Analysis utilizando GO (BP, MF e CC), KEGG e Reactome, com visualizações adequadas aos resultados: dotplot, heatplot, ridgeplot, GSEA plots, enrichment map (emapplot) e network plot (cnetplot).</p></div>
+      <div class="addon-card"><strong>Análises personalizadas · Sob consulta</strong><p>Análises adicionais conforme os objetivos e as necessidades específicas do projeto.</p></div>
+    </div>
+    <div class="back-cta"><div><h3>Tem dados de proteômica para analisar?</h3><p>Envie informações sobre a plataforma, tipo de quantificação, número de amostras e objetivo do estudo para receber uma proposta personalizada.</p></div><a href="index.html#contato" class="btn btn-primary">Solicitar orçamento</a></div>
   </div>
 </section>
 
@@ -83,9 +93,12 @@
     <span>© 2026 GB Bioinformatics</span>
     <a href="index.html">← Voltar para home</a>
   </div>
+  <div class="container" style="padding-bottom:16px;text-align:center"><a href="politica-de-privacidade.html" style="font-size:12px;color:var(--text-tertiary)">Política de Privacidade</a></div>
 </footer>
 
 <script src="script.js"></script>
-  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6b4488f28a99471791528139cd4b5e89"}'></script><!-- End Cloudflare Web Analytics -->
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6b4488f28a99471791528139cd4b5e89"}'></script>
+<!-- End Cloudflare Web Analytics -->
 </body>
 </html>

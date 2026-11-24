@@ -13,8 +13,8 @@
 <meta property="og:title" content="Metagenômica 16S rRNA — GB Bioinformatics">
 <meta property="og:description" content="Pipeline completo de 16S: DADA2, QIIME2, diversidade, abundância e funções metabólicas.">
 <meta property="og:url" content="https://gabrielibovi-bioinfo.github.io/site/metagenomica-16s.html">
-<!-- Analytics: substitua SEU-DOMINIO pelo domínio cadastrado no Plausible para ativar as métricas. -->
-<script defer data-domain="SEU-DOMINIO" src="https://plausible.io/js/script.js"></script>
+
+
 </head>
 <body>
 
@@ -53,7 +53,7 @@
   <div class="container two-col">
     <div class="detail-block">
       <h2>O que essa análise revela</h2>
-      <p>Sequenciamos e comparamos o material genético presente em uma amostra (solo, água, fezes, microbioma de planta, superfícies etc.) para responder: <strong>quais microrganismos estão presentes e funções metabólicas</strong>, sem precisar isolá-los em laboratório.</p>
+      <p>Analisamos dados de sequenciamento de amplicons 16S rRNA obtidos de amostras (solo, água, fezes, microbioma de plantas, superfícies etc.) para investigar: <strong>quais microrganismos estão presentes e funções metabólicas</strong>, sem precisar isolá-los em laboratório.</p>
       <p>O <strong>16S rRNA</strong> sequencia uma região específica do genoma bacteriano/arqueal para classificação taxonômica rápida e de baixo custo. Já o <strong>shotgun metagenômico</strong> sequencia todo o DNA da amostra, permitindo também inferir funções metabólicas presentes na comunidade.</p>
 
       <h2 style="margin-top:32px;">Etapas do pipeline</h2>
@@ -72,38 +72,59 @@
       <h2 style="font-size:20px;margin-bottom:14px;">Gráficos entregues</h2>
       <p style="color:var(--text-secondary);font-size:13.5px;margin-bottom:16px;">Exemplos reais gerados a partir de uma análise 16S conduzida com DADA2.</p>
 
-      <div class="carousel">
+      <div class="carousel" aria-label="Exemplos de gráficos e entregáveis de análise 16S">
         <div class="carousel-viewport">
           <div class="carousel-track">
-            <div class="carousel-slide" data-caption="Perfil de qualidade dos reads forward antes do processamento"><img src="img/quality_F.jpg" alt="Perfil de qualidade dos reads forward"></div>
-            <div class="carousel-slide" data-caption="Perfil de qualidade após trimming e filtragem"><img src="img/quality_trim_F.jpg" alt="Perfil de qualidade após trimming"></div>
-            <div class="carousel-slide" data-caption="Taxas de erro estimadas pelo modelo do DADA2"><img src="img/plotErrors_F.jpg" alt="Taxas de erro do DADA2"></div>
-            <div class="carousel-slide" data-caption="Curva de rarefação por amostra"><img src="img/rarecurve.jpg" alt="Curva de rarefação"></div>
-            <div class="carousel-slide" data-caption="Riqueza de espécies (diversidade alfa) por amostra"><img src="img/richness.jpg" alt="Riqueza de espécies (diversidade alfa) por amostra"></div>
-            <div class="carousel-slide" data-caption="NMDS — diversidade beta entre amostras"><img src="img/plot_beta_NMDS.jpg" alt="NMDS de diversidade beta"></div>
-            <div class="carousel-slide" data-caption="PCoA — diversidade beta entre amostras"><img src="img/plot_beta_PCoA.jpg" alt="PCoA de diversidade beta"></div>
-            <div class="carousel-slide" data-caption="Abundância relativa em gráfico de barras empilhadas"><img src="img/barplot_f.jpg" alt="Abundância relativa em gráfico de barras empilhadas"></div>
-            <div class="carousel-slide" data-caption="Abundância relativa em heatmap"><img src="img/heatmap_f.jpg" alt="Abundância relativa em heatmap"></div>
-            <div class="carousel-slide" data-caption="Funções metabólicas (AOB, NOB, DNB, PAO e GAO) das 5 famílias mais abundantes (sem estatística)"><img src="img/func_norm_family.jpg" alt="Funções metabólicas (AOB, NOB, DNB, PAO e GAO) das 5 famílias mais abundantes (sem estatística)"></div>
-            <div class="carousel-slide" data-caption="Funções metabólicas (AOB, NOB, DNB, PAO e GAO) das 5 famílias mais abundantes (wilcox test)"><img src="img/func_norm_family_2.jpg" alt="Funções metabólicas (AOB, NOB, DNB, PAO e GAO) das 5 famílias mais abundantes (wilcox test)"></div>
+            <div class="carousel-slide" data-caption="Qualidade das reads e curva de rarefação"><img src="img/carrossel-16s/slide-2.png" alt="Exemplo de controle de qualidade e curva de rarefação"></div>
+            <div class="carousel-slide" data-caption="Diversidade alfa: riqueza e índices de diversidade"><img src="img/carrossel-16s/slide-3.png" alt="Exemplo de gráficos de diversidade alfa"></div>
+            <div class="carousel-slide" data-caption="Diversidade beta: PCoA e comparação entre grupos"><img src="img/carrossel-16s/slide-4.png" alt="Exemplo de gráfico PCoA de diversidade beta"></div>
+            <div class="carousel-slide" data-caption="Composição taxonômica e abundância relativa"><img src="img/carrossel-16s/slide-5.png" alt="Exemplo de composição taxonômica por abundância relativa"></div>
+            <div class="carousel-slide" data-caption="Análise diferencial de táxons com ANCOM-BC2"><img src="img/carrossel-16s/slide-6.png" alt="Exemplos de Volcano plot, Barplot e Forest plot do ANCOM-BC2"></div>
+            <div class="carousel-slide" data-caption="Predição funcional com PICRUSt2"><img src="img/carrossel-16s/slide-7.png" alt="Exemplos de predição funcional com PICRUSt2"></div>
           </div>
           <button class="carousel-nav carousel-prev" aria-label="Anterior">‹</button>
           <button class="carousel-nav carousel-next" aria-label="Próximo">›</button>
         </div>
-        <div class="carousel-meta">
-          <span class="carousel-caption"></span>
-          <span class="carousel-counter"></span>
-        </div>
+        <div class="carousel-meta"><span class="carousel-caption"></span><span class="carousel-counter"></span></div>
         <div class="carousel-dots"></div>
       </div>
     </div>
   </div>
 
-  <div class="container">
-    <div class="back-cta">
-      <div><h3>Pronto para analisar seu microbioma?</h3><p>Envie por e-mail algumas informações sobre sua amostra para receber o orçamento. O valor varia de acordo com a quantidade de amostras e a complexidade da análise ou dos gráficos personalizados — normalmente entre R$ 500 e R$ 900, com nota fiscal de serviço.</p></div>
-      <a href="index.html#contato" class="btn btn-primary">Solicitar orçamento</a>
+  <div class="container pricing-section" id="investimento">
+    <div class="section-head"><p class="eyebrow">Pacotes e investimento</p><h2>Análise de amplicon 16S rRNA</h2><p>Pacotes para sequenciamento 16S rRNA com Illumina e Nanopore. Os valores consideram até 10 amostras, dentro das condições técnicas descritas.</p></div>
+    <div class="pricing-layout">
+      <div class="pricing-main">
+        <div class="pricing-card">
+          <p class="eyebrow">Pacote essencial · Illumina</p><div class="price">R$ 570,00</div><p class="price-note">Valor base para até 10 amostras, considerando aproximadamente 100 mil reads por amostra.</p>
+          <ul class="price-list">
+            <li>01. Controle de qualidade e processamento inicial</li>
+            <li>02. Classificação taxonômica</li>
+            <li>03. Diversidade alfa: Observed ASVs, Chao1, ACE, Shannon, Simpson, InvSimpson, Fisher e Faith's PD</li>
+            <li>04. Diversidade beta: PCoA com UniFrac e/ou Bray-Curtis</li>
+            <li>05. Curva de rarefação</li>
+            <li>06. Abundância relativa: top 10 de filo, classe, ordem, família, gênero e espécie, conforme resolução taxonômica</li>
+            <li>07. Relatório técnico, tabelas e gráficos em TIFF (300 dpi)</li>
+          </ul>
+          <p class="price-note">Amostras excedentes: R$ 5,00 por amostra, nas condições técnicas previstas no pacote. A análise diferencial utiliza correção para múltiplos testes (por exemplo, BH ou Holm), com critério de significância definido no plano analítico (referência: q &lt; 0,05).</p>
+        </div>
+      </div>
+      <aside class="pricing-addons">
+        <h3>Análises adicionais · Illumina</h3>
+        <div class="addon-list">
+          <div class="addon-card"><strong>ANCOM-BC2 · R$ 100,00</strong><p>Análise diferencial de abundância taxonômica, com Volcano plot e Forest plot. A aplicação depende do desenho experimental e da estrutura dos metadados.</p></div>
+          <div class="addon-card"><strong>PICRUSt2 · R$ 100,00</strong><p>Predição do perfil funcional potencial a partir das ASVs. Os resultados são inferências e não medidas diretas de atividade metabólica.</p></div>
+          <div class="addon-card"><strong>Análises personalizadas · Sob consulta</strong><p>Etapas adicionais definidas conforme os objetivos e as necessidades do projeto.</p></div>
+        </div>
+      </aside>
     </div>
+    <div class="pricing-card nanopore-card">
+      <p class="eyebrow">Pacote essencial · Nanopore 16S full-length</p><div class="price">R$ 750,00</div><p class="price-note">Valor base para até 10 amostras. Inclui processamento e análise taxonômica de sequências full-length de 16S rRNA. PICRUSt2 não está incluído neste pacote.</p>
+      <p class="price-note">Amostras excedentes: R$ 7,00 por amostra, nas condições técnicas previstas no pacote. A confirmação do escopo considera qualidade, volume das reads e características dos dados recebidos.</p>
+    </div>
+    <p class="pricing-disclaimer">A quantidade, o formato e a apresentação dos gráficos podem variar de acordo com o número de amostras, a qualidade dos dados e o comportamento observado nas análises.</p>
+    <div class="info-card" style="margin-top:18px"><h3>Condições comerciais</h3><p>Prazo estimado: 15 dias úteis após recebimento dos dados brutos, metadados completos e pagamento inicial. Pagamento: 50% no aceite e 50% na entrega. Três rodadas de ajustes de gráficos e relatório, solicitadas em até 30 dias após a entrega. Para dois ou mais projetos, desconto de 10% sobre o total contratado. Alterações de metadados que exijam reprocessamento podem gerar cobrança adicional.</p><p>As condições e os entregáveis podem ser ajustados quando o desenho experimental, a qualidade dos dados ou o volume de reads exigirem etapas adicionais.</p></div>
+    <div class="back-cta"><div><h3>Tem dados de 16S para analisar?</h3><p>Conte sobre a plataforma de sequenciamento, quantidade de amostras e objetivo do estudo para receber uma proposta adequada.</p></div><a href="index.html#contato" class="btn btn-primary">Solicitar orçamento</a></div>
   </div>
 </section>
 
@@ -114,9 +135,12 @@
     <span>© 2026 GB Bioinformatics</span>
     <a href="index.html">← Voltar para home</a>
   </div>
+  <div class="container" style="padding-bottom:16px;text-align:center"><a href="politica-de-privacidade.html" style="font-size:12px;color:var(--text-tertiary)">Política de Privacidade</a></div>
 </footer>
 
 <script src="script.js"></script>
-  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6b4488f28a99471791528139cd4b5e89"}'></script><!-- End Cloudflare Web Analytics -->
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6b4488f28a99471791528139cd4b5e89"}'></script>
+<!-- End Cloudflare Web Analytics -->
 </body>
 </html>

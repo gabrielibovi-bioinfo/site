@@ -6,3 +6,7 @@ https://gabrielibovi-bioinfo.github.io/site/transcriptomica.html
 https://gabrielibovi-bioinfo.github.io/site/variant-calling.html
 
 https://gabrielibovi-bioinfo.github.io/site/divulgacao-cientifica.html
+
+https://gabrielibovi-bioinfo.github.io/site/artigo-metagenomica-16s.html
+https://gabrielibovi-bioinfo.github.io/site/artigo-transcriptomica-rnaseq.html
+https://gabrielibovi-bioinfo.github.io/site/politica-de-privacidade.html
