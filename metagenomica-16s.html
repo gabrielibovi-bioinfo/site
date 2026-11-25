@@ -58,13 +58,15 @@
 
       <h2 style="margin-top:32px;">Etapas do pipeline</h2>
       <ul class="step-list">
-        <li><span class="step-num">01</span><span><strong>Controle de qualidade</strong> — remoção de adaptadores e reads de baixa qualidade (fastp/FastQC).</span></li>
+        <li><span class="step-num">01</span><span><strong>Controle de qualidade</strong> — remoção de adaptadores e reads de baixa qualidade.</span></li>
         <li><span class="step-num">02</span><span><strong>Agrupamento</strong> — inferência de ASVs (DADA2) ou OTUs (QIIME2) a partir das reads filtradas.</span></li>
-        <li><span class="step-num">03</span><span><strong>Classificação taxonômica</strong> — contra bancos SILVA, GTDB ou MiDAS.</span></li>
-        <li><span class="step-num">04</span><span><strong>Análise de diversidade</strong> — diversidade alfa e beta.</span></li>
-        <li><span class="step-num">05</span><span><strong>Abundância relativa</strong> — composição taxonômica.</span></li>
-        <li><span class="step-num">06</span><span><strong>Análise funcional</strong> — predição de funções metabólicas a partir das ASVs com PICRUSt2.</span></li>
-        <li><span class="step-num">07</span><span><strong>Relatório</strong> — explicação da metodologia e resultados.</span></li>
+        <li><span class="step-num">03</span><span><strong>Classificação taxonômica</strong> — bancos SILVA, GTDB ou MiDAS</span></li>
+        <li><span class="step-num">04</span><span><strong>Diversidade alfa</strong> — Observed, Chao1, ACE, Shannon, Simpson, InvSimpson, Fisher e Faith's PD.</span></li>
+        <li><span class="step-num">05</span><span><strong>Diversidade beta</strong> — PCoA com UniFrac, Aitchison e Bray-Curtis.</span></li>
+        <li><span class="step-num">06</span><span><strong>Abundância relativa</strong> — composição taxonômica.</span></li>
+        <li><span class="step-num">07</span><span><strong>Análise diferencial de abundância</strong> — análise diferencial de abundância taxonômica com ANCOM-BC2.</span></li>
+        <li><span class="step-num">08</span><span><strong>Análise funcional</strong> — predição de funções metabólicas a partir das ASVs/OTUs com PICRUSt2.</span></li>
+        <li><span class="step-num">09</span><span><strong>Relatório</strong> — explicação da metodologia e resultados.</span></li>
       </ul>
     </div>
 
@@ -101,19 +103,19 @@
             <li>01. Controle de qualidade e processamento inicial</li>
             <li>02. Classificação taxonômica</li>
             <li>03. Diversidade alfa: Observed ASVs, Chao1, ACE, Shannon, Simpson, InvSimpson, Fisher e Faith's PD</li>
-            <li>04. Diversidade beta: PCoA com UniFrac e/ou Bray-Curtis</li>
+            <li>04. Diversidade beta: PCoA com UniFrac, Aitchison e Bray-Curtis.</li>
             <li>05. Curva de rarefação</li>
             <li>06. Abundância relativa: top 10 de filo, classe, ordem, família, gênero e espécie, conforme resolução taxonômica</li>
             <li>07. Relatório técnico, tabelas e gráficos em TIFF (300 dpi)</li>
           </ul>
-          <p class="price-note">Amostras excedentes: R$ 5,00 por amostra, nas condições técnicas previstas no pacote. A análise diferencial utiliza correção para múltiplos testes (por exemplo, BH ou Holm), com critério de significância definido no plano analítico (referência: q &lt; 0,05).</p>
+          <p class="price-note">Amostras excedentes: R$ 5,00 por amostra, nas condições técnicas previstas no pacote.</p>
         </div>
       </div>
       <aside class="pricing-addons">
         <h3>Análises adicionais · Illumina</h3>
         <div class="addon-list">
-          <div class="addon-card"><strong>ANCOM-BC2 · R$ 100,00</strong><p>Análise diferencial de abundância taxonômica, com Volcano plot e Forest plot. A aplicação depende do desenho experimental e da estrutura dos metadados.</p></div>
-          <div class="addon-card"><strong>PICRUSt2 · R$ 100,00</strong><p>Predição do perfil funcional potencial a partir das ASVs. Os resultados são inferências e não medidas diretas de atividade metabólica.</p></div>
+          <div class="addon-card"><strong>ANCOM-BC2 · R$ 100,00</strong><p>Análise diferencial de abundância taxonômica, com Volcano, Forest Plot e Barplot. A aplicação depende do desenho experimental e da estrutura dos metadados.</p></div>
+          <div class="addon-card"><strong>PICRUSt2 · R$ 100,00</strong><p>Predição do perfil funcional potencial a partir das ASVs/OTUs com PCA, Volcano, Dotplot, pathway error bar e contribuição por gênero para top 10 K0s. Os resultados são inferências e não medidas diretas de atividade metabólica.</p></div>
           <div class="addon-card"><strong>Análises personalizadas · Sob consulta</strong><p>Etapas adicionais definidas conforme os objetivos e as necessidades do projeto.</p></div>
         </div>
       </aside>
