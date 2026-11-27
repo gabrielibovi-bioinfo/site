@@ -475,3 +475,9 @@ footer{border-top:1px solid var(--border)}
 .article-back{margin-top:28px}
 @media(max-width:900px){.editorial-layout{grid-template-columns:190px minmax(0,1fr);gap:28px}.article-toc{top:90px}}
 @media(max-width:700px){.editorial-categories{gap:7px}.category-tab{font-size:13px;padding:9px 13px}.editorial-section{padding-top:28px}.editorial-layout{display:block}.article-toc{position:relative;top:auto;max-height:none;overflow:visible;border-right:0;border-bottom:1px solid var(--border);padding:0 0 16px;margin:0 0 28px}.article-toc nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px}.article-toc a,.article-toc a.toc-h3{font-size:12px;padding:7px 8px}.article-content p,.article-content li{font-size:15px}.editorial-card{min-height:0}}
+
+/* Espaçamento entre parágrafos dos artigos científicos */
+.article-content p {
+    margin-bottom: 1.2em;
+    line-height: 1.7;
+}
