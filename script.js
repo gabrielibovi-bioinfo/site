@@ -118,3 +118,16 @@ document.addEventListener('DOMContentLoaded', () => {
   initCarousels();
   initNavToggle();   // ← add this line
 });
+
+// Índice lateral padrão para todos os artigos da revista científica
+document.addEventListener('DOMContentLoaded',()=>{
+ const article=document.querySelector('.article-content'); const toc=document.querySelector('#article-toc nav');
+ if(!article||!toc)return;
+ const headings=[...article.querySelectorAll('h2[id],h3')].filter(h=>!h.closest('.article-cta'));
+ headings.forEach((h,i)=>{if(!h.id){h.id='secao-'+(i+1)+'-'+h.textContent.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');}
+ const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent.trim();if(h.tagName==='H3')a.classList.add('toc-h3');toc.appendChild(a);});
+ const links=[...toc.querySelectorAll('a')];
+ const setActive=id=>{links.forEach(a=>{const active=a.hash==='#'+id;a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});};
+ if('IntersectionObserver'in window){const obs=new IntersectionObserver(entries=>{const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top);if(visible[0])setActive(visible[0].target.id);},{rootMargin:'-18% 0px -70% 0px',threshold:0});headings.forEach(h=>obs.observe(h));}
+ links.forEach(a=>a.addEventListener('click',()=>setActive(a.hash.slice(1))));
+});
